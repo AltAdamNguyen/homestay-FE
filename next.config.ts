@@ -7,12 +7,14 @@ const nextConfig: NextConfig = {
     },
     webpack: (config) => {
         config.module.rules.push({
-            test: /\.less$/i,
-            use: [
-                'style-loader',
-                'css-loader',
-                'less-loader'
-            ]
+            // test: /\.less$/i,
+            // use: [
+            //     'style-loader',
+            //     'css-loader',
+            //     'less-loader'
+            // ]
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader'],
         })
         return config;
     }
