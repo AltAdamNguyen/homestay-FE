@@ -3,7 +3,7 @@ import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
-import {Flex, Space} from "antd";
+import {Space} from "antd";
 import React from "react";
 import {SiFacebook, SiInstagram} from "react-icons/si";
 import dayjs from "dayjs";
