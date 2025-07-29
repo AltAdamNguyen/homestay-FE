@@ -3,45 +3,34 @@ import React from "react";
 import {CiMail} from "react-icons/ci";
 import {IoCallOutline} from "react-icons/io5";
 import {FiMapPin} from "react-icons/fi";
-import {Flex, Form, Space} from "antd";
+import {Form, Space} from "antd";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Checkbox} from "@/components/ui/checkbox";
 import _ from "lodash";
 
-const CheckboxField = ({value, onChange}) => (
-    <Flex align='center' gap={8}>
-        <Checkbox
-            className='data-[state=checked]:bg-[#d57c3d] data-[state=checked]:border-[#d57c3d] data-[state=checked]:text-white'
-            checked={value}
-            onCheckedChange={onChange}
-        />
-        <span className='text-sm'>I accept the Terms</span>
-    </Flex>
-)
-
-const listRooms = [
-    {
-        title: 'Standard Room',
-        description: 'Perfect for solo travelers or couples seeking comfort.',
-        price: 75,
-    },
-    {
-        title: 'Standard Room',
-        description: 'Perfect for solo travelers or couples seeking comfort.',
-        price: 75,
-    },
-    {
-        title: 'Standard Room',
-        description: 'Perfect for solo travelers or couples seeking comfort.',
-        price: 75,
-    },
-    {
-        title: 'Standard Room',
-        description: 'Perfect for solo travelers or couples seeking comfort.',
-        price: 75,
-    }
-]
+// const listRooms = [
+//     {
+//         title: 'Standard Room',
+//         description: 'Perfect for solo travelers or couples seeking comfort.',
+//         price: 75,
+//     },
+//     {
+//         title: 'Standard Room',
+//         description: 'Perfect for solo travelers or couples seeking comfort.',
+//         price: 75,
+//     },
+//     {
+//         title: 'Standard Room',
+//         description: 'Perfect for solo travelers or couples seeking comfort.',
+//         price: 75,
+//     },
+//     {
+//         title: 'Standard Room',
+//         description: 'Perfect for solo travelers or couples seeking comfort.',
+//         price: 75,
+//     }
+// ]
 
 const listContact = [
     {
@@ -113,17 +102,20 @@ const FormContact: React.FC = () => {
                     <Form.Item label={<label className='text-base'>Message</label>} name='message'>
                         <Textarea placeholder='Type your message'/>
                     </Form.Item>
-                    <Form.Item
-                        name='accept'
-                        rules={[
-                            {validator: (__, value) => {
-                                    if (!value) return Promise.reject('Please check this box if you want process')
-                                    return Promise.resolve()
-                                }}
-                        ]}
-                    >
-                        <CheckboxField/>
-                    </Form.Item>
+                    <div className='flex items-center mb-[24px] gap-[8px]'>
+                        <Form.Item
+                            name='accept' noStyle
+                            rules={[
+                                {validator: (__, value) => {
+                                        if (!value) return Promise.reject('Please check this box if you want process')
+                                        return Promise.resolve()
+                                    }}
+                            ]}
+                        >
+                            <Checkbox className='data-[state=checked]:bg-[#d57c3d] data-[state=checked]:border-[#d57c3d] data-[state=checked]:text-white'/>
+                        </Form.Item>
+                        <span>I accept the Terms</span>
+                    </div>
                     <Form.Item>
                         <div
                             className='bg-[#d57c3d] w-fit hover:bg-[#d57c3dCC] py-[12px] px-[24px] text-white text-base rounded-sm cursor-pointer'
