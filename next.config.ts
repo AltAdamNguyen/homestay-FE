@@ -2,17 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+    reactStrictMode: true,
     experimental: {
 
     },
     webpack: (config) => {
         config.module.rules.push({
-            // test: /\.less$/i,
-            // use: [
-            //     'style-loader',
-            //     'css-loader',
-            //     'less-loader'
-            // ]
             test: /\.css$/,
             use: ['style-loader', 'css-loader'],
         })
