@@ -76,7 +76,7 @@ const FormContact: React.FC = () => {
                     <div className='text-lg pb-[30px]'>We’d love to hear from you! Reach out anytime.</div>
                     <Space direction='vertical' size={6}>
                         {listContact.map((c, i) => (
-                            <Space size={19}>
+                            <Space key={i} size={19}>
                                 {c.icon}
                                 <span className='text-base'>{c.label}</span>
                             </Space>
