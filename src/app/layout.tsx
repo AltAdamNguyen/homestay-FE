@@ -26,29 +26,43 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-light`}>
         <header className='w-screen py-[12px] flex justify-center'>
             <div className='flex justify-between items-center w-3/5'>
                 Logo
                 <Space size={20}>
                     <Link href='/about-us'>
-                        <div className='hover:text-[#d57c3d] hover:no-underline font-light py-[13px] px-[18px] text-black cursor-pointer'>About us</div>
+                        <div
+                            className='hover:text-[#d57c3d] hover:no-underline font-light py-[13px] px-[18px] text-black cursor-pointer'>About
+                            us
+                        </div>
                     </Link>
                     <Link href='/about-us'>
-                        <div className='hover:text-[#d57c3d] hover:no-underline font-light py-[13px] px-[18px] text-black cursor-pointer'>About us</div>
+                        <div
+                            className='hover:text-[#d57c3d] hover:no-underline font-light py-[13px] px-[18px] text-black cursor-pointer'>About
+                            us
+                        </div>
                     </Link>
                     <Link href='/about-us'>
-                        <div className='hover:text-[#d57c3d] hover:no-underline font-light py-[13px] px-[18px] text-black cursor-pointer'>About us</div>
+                        <div
+                            className='hover:text-[#d57c3d] hover:no-underline font-light py-[13px] px-[18px] text-black cursor-pointer'>About
+                            us
+                        </div>
                     </Link>
                     <Link href='/about-us'>
-                        <div className='hover:text-[#d57c3d] hover:no-underline font-light py-[13px] px-[18px] text-black cursor-pointer'>About us</div>
+                        <div
+                            className='hover:text-[#d57c3d] hover:no-underline font-light py-[13px] px-[18px] text-black cursor-pointer'>About
+                            us
+                        </div>
                     </Link>
                 </Space>
-                <div className='bg-[#d57c3d] hover:bg-[#d57c3d80] font-light py-[13px] px-[18px] text-white text-base rounded-sm cursor-pointer'>Explore Now</div>
+                <div
+                    className='bg-[#d57c3d] hover:bg-[#d57c3dCC] font-light py-[13px] px-[18px] text-white text-base rounded-sm cursor-pointer'>Explore
+                    Now
+                </div>
             </div>
         </header>
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
-        </body>
         <footer className='w-screen bg-[#f3f4f6] py-[80px] flex justify-center'>
             <div className='w-3/5 flex flex-col justify-center items-center gap-[20px]'>
                 <div className='w-full flex justify-between items-center'>
@@ -92,6 +106,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                 </div>
             </div>
         </footer>
+        </body>
         </html>
     );
 }

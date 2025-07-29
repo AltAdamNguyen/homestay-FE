@@ -1,8 +1,11 @@
 import React from "react";
+import FormContact from "@/app/components/FormContact";
 
 const Home: React.FC = () => {
   return (
-    <div>home</div>
+    <div>
+      <FormContact/>
+    </div>
   );
 }
 
